@@ -2,6 +2,7 @@
 # Description
 You found some strange symbol in an old monastery. Can you make any sense out of it?
 ![monastery.jpg](../Screenshots/monastery.png)
+\
 
 ## Hint
 After decoding the symbols, combine them to one single number, and do two more conversions.
@@ -21,6 +22,7 @@ And the value the symbols can have is
 
 And the numbers from 1 to 9 are:
 ![Cisterian digits](../Screenshots/Pasted%20image%2020240331141429.png)
+\
 
 But rather than doing the conversion ourselves, let's identify which symbols are in each quadrant and put them on dcode so that we can get the value.
 
