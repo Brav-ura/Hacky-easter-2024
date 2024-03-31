@@ -18,7 +18,7 @@ And the value the symbols can have is
 ![](../Screenshots/Pasted%20image%2020240331140555.png)\
 So by identifying the symbol and its location it's possible to know which value it represents.
 
-And the numbers from 1 to 9 are:
+And the numbers from 1 to 9 are:\
 ![Cisterian digits](../Screenshots/Pasted%20image%2020240331141429.png)\
 But rather than doing the conversion ourselves, let's identify which symbols are in each quadrant and put them on dcode so that we can get the value.
 
