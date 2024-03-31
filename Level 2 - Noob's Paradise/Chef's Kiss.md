@@ -12,4 +12,5 @@ Download the recipe below.
 # Solution
 Since we have the recipe that generated the encoded output, if we do it on reverse then we should get back the flag.
 ![](../Screenshots/Pasted%20image%2020240331103513.png)
+
 `he2024{Cyb3rch3f_cooks_the_b3st_d1nners_from_simple_1ngr1d13nts}`
