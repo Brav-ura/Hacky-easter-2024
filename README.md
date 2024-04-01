@@ -1,5 +1,6 @@
 # Hacky Easter 2024
 ![Hacky easter logo](Screenshots/EwgmBsjU_400x400-1.jpg)
+  
 Hacky Easter is a free, and open to all, Easter themed CTF that has a nice variety of challenges, like web, pwn/exploitation and crypto, among others. And not only that, but it tends to last for around 40 days, so there's no hurry to solve everything by hacking non stop (unless you're going for the first bloods). Because of this, it's hands down my favorite CTF series ever.
 
 Big shout out to the people behind it! https://twitter.com/HackyEaster
