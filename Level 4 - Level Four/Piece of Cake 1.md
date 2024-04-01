@@ -35,3 +35,5 @@ for i in enumerate(encoded_flag):
 
 print(flag)
 ```
+
+Which returns the flag `he2024{That_wa5_a_b1t_1rrat10nal_but_0kaaay.}↔↓`
