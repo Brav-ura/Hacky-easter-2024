@@ -13,7 +13,7 @@ ii35;6Ykf|h~j8adgf7ve5uuiw37wflaj}x`9rbgj|7
 # Solution
 We know that we have to ROT every digit, the only thing is that the number in the rotation is different for every character.
 
-A piece of cake is the big hint to reach the solution. While a pie it's not a dessert, it's close enough to think that it's referring to the number pi **π**.
+A piece of cake is the big hint to reach the solution. While a pie is arguably not a cake, it's close enough to think that it's referring to a pie, or rather, the number pi **π** and its pieces, or decimals.
 
 Rather that ROT'ing by hand every character with cyberchef, let's have a python script do it instead.
 
