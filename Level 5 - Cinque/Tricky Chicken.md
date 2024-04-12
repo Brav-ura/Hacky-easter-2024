@@ -60,4 +60,54 @@ Content-Type: text/html; charset=utf-8
 ```
 
 In this file at the end there's a JavaScript script that checks if the value of the input is equal to a hash `078bbb4bf0f7117fb131ec45f15b5b87` and then redirects to that hash + html, so http://ch.hackyeaster.com:2402/078bbb4bf0f7117fb131ec45f15b5b87.html\
-![](../Screenshots/Pasted%20image%2020240331164935.png)
+![not an egg](../Screenshots/Pasted%20image%2020240331164935.png)
+
+Let's see how the code check works on the browser by looking at the source and setting up a breakpoint in the check_code() function
+\
+![setting up a breackpoint](../Screenshots/Pasted%20image%2020240412185947.png)
+javascript
+```
+
+var head = document.getElementsByTagName("head")[0];
+var script = document.createElement('script');
+script.src = 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/core.js';
+head.appendChild(script);
+var script2 = document.createElement('script');
+script2.src = 'https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/md5.js';
+head.appendChild(script2);
+
+function check_code() {
+    val = document.getElementById("code").value;
+    if (val.length == 8 && val[0] == 'p' && val[1] == 'а' && val[2] == 'z' && val[3] == 'z' && val[4] == 'w' && val[5] == '0' && val[6] == 'r' && val[7] == 'D') {
+        alert("Correct!");
+        document.location.href = "/" + CryptoJS.MD5(val).toString() + ".html";
+    } else {
+        alert("Wrong!");
+    }
+}
+```
+The password seems to be `pazzw0rD`. Let's try entering that.
+
+But that was still wrong? Even if the value was the same one of the conditions on the if was false. Let's try to copy each condition from the JavaScript and paste it in the browser console to see which one evaluates to false. But this needs to be done while the code is typed, as it's being obtained by JavaScript
+\
+![input pazzw0rD on the text field](../Screenshots/Pasted%20image%2020240412190714.png)
+
+Is the length correct?
+\
+![length](../Screenshots/Pasted%20image%2020240412190607.png)
+Is the first character correct?
+\
+![first character](../Screenshots/Pasted%20image%2020240412190504.png)
+
+Is the second one correct?
+![second character](../Screenshots/Pasted%20image%2020240412190847.png)
+Wait... what? Could it be a unicode character that resembles the lowercase `a`? Copying it and comparing it to the actual lowercase a still evaluates to false, so they are definitely not the same letter.
+\
+![a!=а](../Screenshots/Pasted%20image%2020240412191035.png)
+In that case, let's just replace the lowercase a with that other one and send the code pаzzw0rD
+\
+![code: pаzzw0rD](../Screenshots/Pasted%20image%2020240412191220.png)
+
+And thus the real egg is obtained with the flag `he2024{such_4_tr1cky_ch1ck3N!}`
+\
+![flag](../Screenshots/Pasted%20image%2020240412191411.png)
