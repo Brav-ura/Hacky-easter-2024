@@ -55,7 +55,6 @@ But running this binary just kicks me out, as it can be seen by running `strings
 \
 ![strings from reset](../Screenshots/Pasted%20image%2020240417214245.png)
 \
-
 So let's go back and explore how adding ourselves to a group can be used to escalate privileges.
 Modifying directly the /etc/group file can add a user to a group by appending the name of the user at the end of the line. Like it shows in the current file for the root group. `vi /etc/group`
 \
@@ -88,6 +87,6 @@ And now we can `su boss` with the letmein password
 \
 ![becoming the boss](../Screenshots/Pasted%20image%2020240417221101.png)
 \
-And now we can run the lockdown.sh script and get the flag `he2024{z0ne_l0ckd0wn_succ3ssfully_tr1gg3r3d}`
+And finally run the lockdown.sh script to get the flag `he2024{z0ne_l0ckd0wn_succ3ssfully_tr1gg3r3d}`
 \
 ![running lockdown.sh](../Screenshots/Pasted%20image%2020240417221209.png)
