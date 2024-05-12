@@ -54,16 +54,13 @@ Going to the image URL `/static/whopper.png` returns a 404, so this JavaScript s
 The login page only has the fields for login and password.
 
 So let's authenticate
-\
 
 ![](../Screenshots/Pasted%20image%2020240331132215.png)
-\
 
 This prompts for a second factor authentication. It's unlikely that this needs to be brute forced. Since we don't even know how many digits the code consists of. So let's select the *Try another way* link.
-\
+
 
 ![](../Screenshots/Pasted%20image%2020240331132410.png)
-\
 
 Nowhere on the page have we found information regarding joe, so brute forcing the values is out of the question. So let's have a look at the request that this form generates.
 
@@ -85,9 +82,7 @@ Upgrade-Insecure-Requests: 1
 question0=test&question1=test&submit=Continue
 ```
 What would happen if we don't send the parameters at all? Only the sumbit=Continue
-\
 
 ![](../Screenshots/Pasted%20image%2020240331132729.png)
-\
 
 So this returns the QR with the flag, `he2024{Not_that_easy_anymore, sigh!}`, with an interesting bit of trivia about an actual vulnerability that happened. Guess that sometimes it's just that easy, huh?
