@@ -25,11 +25,17 @@ Disallow: /r/
 ```
 There's a sitemap
 ![sitemap.xml](../Screenshots/Pasted%20image%2020240412183259.png)
+
 a /ghost/ directory that redirects to a sign in
+
 ![/ghost/](../Screenshots/Pasted%20image%2020240412183357.png)
+
 A /p/ directory that seems to lead nowhere. Same for /email/ and /r/
+
 ![404](../Screenshots/Pasted%20image%2020240412183518.png)
 
 Ok, so the goal is finding egg.png... could it be as easy as going to `/egg.png`?
+
 ![egg.png](../Screenshots/Pasted%20image%2020240412183737.png)
+
 Got the flag `he2024{p4th_tr4v3rs4ls_st1ll_h4pp3ns}` and it's valid... so this is surely not the intended solution, but hey, if it works it works.
