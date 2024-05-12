@@ -21,7 +21,6 @@ It's not 𝛑 this time.
 After plenty of time reading about different irrational numbers, like e, the golden ratio, square root of 3 and 9, the wiki page on Euler's constant (e) https://en.wikipedia.org/wiki/Euler's_constant and https://encyclopediaofmath.org/wiki/Euler_constant, it's irrationality is put into question since it can be represented as a continued fraction that is known to have at least 475,006 terms, potentially infinite if e is indeed irrational.
 
 ![euler](../Screenshots/Pasted%20image%2020240509222203.png)
-\
 
 Going from this, if e is the constant we've got to use, the next thing is get as many digits as we can, since every hacker's birthday didn't ring a bell, and trying to search for it lead nowhere.
 
