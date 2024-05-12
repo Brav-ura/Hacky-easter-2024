@@ -1,8 +1,8 @@
 #web
 # Description
 Hope you like the design of this year's eggs!
-![](../Screenshots/Pasted%20image%2020240330200718.png)
-  
+\
+![egg design](../Screenshots/Pasted%20image%2020240330200718.png)  
 # Solution
 It looks like the flag might be in one of these overlapped eggs. Let's inspect the HTML code of the image on the browser to see if we can find any clues.
 ```
