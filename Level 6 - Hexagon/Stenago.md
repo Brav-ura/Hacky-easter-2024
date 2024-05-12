@@ -2,7 +2,7 @@
 # Description
 My friend sent me this image, but I don't get the message.
 
-Never heard of this stenago thing.\
+Never heard of this stenago thing.
 
 ![stenago.png](../Screenshots/Pasted%20image%2020240506203222.png)
 # Solution
@@ -25,7 +25,6 @@ Nothing of any particular value in here.
 We have the option to see full red, full green, full blue, inverse RGB values and LSB (least significant bit) half.
 
 Couldn't see anything interesting in any, except a curious pattern on the very beginning of the image
-\
 
 ![Suspicious pattern](../Screenshots/Pasted%20image%2020240506204513.png)
 \
