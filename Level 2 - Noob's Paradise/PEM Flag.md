@@ -17,4 +17,6 @@ There's a PEM to Hex
 
 Using that gives us, as expected a Hex value. Let's try to get the value from Hex to it's raw value with the *From Hex* recipe
 ![](../Screenshots/Pasted%20image%2020240331100114.png)
+\
+
 And we've got the flag `he2024{hex-a-decimal}`

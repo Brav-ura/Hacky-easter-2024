@@ -9,46 +9,15 @@ Note: The service is restarted every hour at x:00.
 Let's first start looking at the page and its source.
 **index**
 ```
-<html>
-
-<head>
-    <title>BucksBuddy</title>
-    <link rel="stylesheet" href="/static/app.css">
-    <script src="/static/app.js" language="javascript"></script>
-</head>
-
+[SNIPPED]
 <body>
     <div id="head">
         <a href="/"><img class="item-left" src="/static/logo.png" /></a>
-        <h1 class="item-center">Bucks<span>Buddy</span></h1>
-
-        
+        <h1 class="item-center">Bucks<span>Buddy</span></h1>     
         <div class="item-right">
             ||| <a href="/login">Login</a>
         </div>
-        
-        
-    </div>
-    <hr>
-    <div id="content">
-<div> 
-<center>
-<h2>Welcome</h2>
-...
-<h2>to</h2>
-...
-<h1>Bucks<span>Buddy</span></h1>
-Your very trustworthy payment companion
-</center>
-</div>
-</div>
-    <div id="footer">
-        <hr>
-        <p>Created by inik / 2024</p>
-    </div>
-</body>
-
-</html>
+[SNIPPED]        
 ```
 
 **/static/app.js**
@@ -67,41 +36,7 @@ Going to the image URL `/static/whopper.png` returns a 404, so this JavaScript s
 
 **/login**
 ```
-Server: Werkzeug/3.0.1 Python/3.12.2
-Date: Sun, 31 Mar 2024 09:31:42 GMT
-Content-Type: text/html; charset=utf-8
-Content-Length: 1138
-Access-Control-Allow-Origin: *
-Connection: close
-
-<html>
-
-<head>
-    <title>BucksBuddy</title>
-    <link rel="stylesheet" href="/static/app.css">
-    <script src="/static/app.js" language="javascript"></script>
-</head>
-
-<body>
-    <div id="head">
-        <a href="/"><img class="item-left" src="/static/logo.png" /></a>
-        <h1 class="item-center">Bucks<span>Buddy</span></h1>
-
-        
-        <div class="item-right">
-            ||| <a href="/login">Login</a>
-        </div>
-        
-        
-    </div>
-    <hr>
-    <div id="content">
-<div class="block">
-	<h2>Login</h2>
-	<div class="login row">
-		<div class="login-item">
-			 
-
+[SNIPPED]
 			<form method="POST" action="/login">
 				<div class="item">
 					<input class="input" type="text" name="login"
@@ -114,27 +49,21 @@ Connection: close
 				</div>
 				<div class="item">
 					<input class="button" type="submit" name="submit" value="Login" />
-				</div>
-			</form>
-		</div>
-	</div>
-</div>
-</div>
-    <div id="footer">
-        <hr>
-        <p>Created by inik / 2024</p>
-    </div>
-</body>
-
-</html>
+[SNIPPED]
 ```
 The login page only has the fields for login and password.
 
 So let's authenticate
+\
+
 ![](../Screenshots/Pasted%20image%2020240331132215.png)
+\
 
 This prompts for a second factor authentication. It's unlikely that this needs to be brute forced. Since we don't even know how many digits the code consists of. So let's select the *Try another way* link.
+\
+
 ![](../Screenshots/Pasted%20image%2020240331132410.png)
+\
 
 Nowhere on the page have we found information regarding joe, so brute forcing the values is out of the question. So let's have a look at the request that this form generates.
 
@@ -156,6 +85,9 @@ Upgrade-Insecure-Requests: 1
 question0=test&question1=test&submit=Continue
 ```
 What would happen if we don't send the parameters at all? Only the sumbit=Continue
+\
+
 ![](../Screenshots/Pasted%20image%2020240331132729.png)
+\
 
 So this returns the QR with the flag, `he2024{Not_that_easy_anymore, sigh!}`, with an interesting bit of trivia about an actual vulnerability that happened. Guess that sometimes it's just that easy, huh?
