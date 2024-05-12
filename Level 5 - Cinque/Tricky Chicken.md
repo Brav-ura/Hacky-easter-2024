@@ -59,7 +59,8 @@ Content-Type: text/html; charset=utf-8
 </html>
 ```
 
-In this file at the end there's a JavaScript script that checks if the value of the input is equal to a hash `078bbb4bf0f7117fb131ec45f15b5b87` and then redirects to that hash + html, so http://ch.hackyeaster.com:2402/078bbb4bf0f7117fb131ec45f15b5b87.html\
+In this file at the end there's a JavaScript script that checks if the value of the input is equal to a hash `078bbb4bf0f7117fb131ec45f15b5b87` and then redirects to that hash + html, so http://ch.hackyeaster.com:2402/078bbb4bf0f7117fb131ec45f15b5b87.html
+
 ![not an egg](../Screenshots/Pasted%20image%2020240331164935.png)
 
 Let's see how the code check works on the browser by looking at the source and setting up a breakpoint in the check_code() function
@@ -96,15 +97,19 @@ But that was still wrong? Even if the value was the same one of the conditions o
 Is the length correct?
 
 ![length](../Screenshots/Pasted%20image%2020240412190607.png)
+
 Is the first character correct?
 
 ![first character](../Screenshots/Pasted%20image%2020240412190504.png)
 
 Is the second one correct?
+
 ![second character](../Screenshots/Pasted%20image%2020240412190847.png)
+
 Wait... what? Could it be a unicode character that resembles the lowercase `a`? Copying it and comparing it to the actual lowercase a still evaluates to false, so they are definitely not the same letter.
 
 ![a!=а](../Screenshots/Pasted%20image%2020240412191035.png)
+
 In that case, let's just replace the lowercase a with that other one and send the code pаzzw0rD
 
 ![code: pаzzw0rD](../Screenshots/Pasted%20image%2020240412191220.png)
