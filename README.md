@@ -5,6 +5,6 @@ Hacky Easter is a free, and open to all, Easter themed CTF that has a nice varie
 
 Big shout out to the people behind it! https://twitter.com/HackyEaster
 
-These are the write ups for my solutions to the Hacky Easter 2024 CTF challenges. Some scripts that I used are included in the corresponding level folder with the same name of the challenge.
+These are the write ups for my solutions to the Hacky Easter 2024 CTF challenges. Some scripts that I used are included in the scripts folder.
 
 While this is not my first Hacky Easter, this is the first time that I finally decided to document fully and publish it.
